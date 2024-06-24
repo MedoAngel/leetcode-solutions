@@ -4,5 +4,18 @@
  * @return {number}
  */
 var strStr = function(haystack, needle) {
-   return haystack.indexOf(needle);
+    let left = 0;
+    let right = needle.length-1;
+
+
+    while(right < haystack.length){
+        const window = haystack.slice(left,right+1)
+
+        if(window === needle) return left;
+
+        left++;
+        right++;
+    }
+
+    return -1;
 };
