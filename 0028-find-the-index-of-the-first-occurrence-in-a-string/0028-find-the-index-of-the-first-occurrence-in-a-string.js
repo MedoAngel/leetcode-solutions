@@ -4,6 +4,8 @@
  * @return {number}
  */
 var strStr = function(haystack, needle) {
+    if(needle.length > haystack.length) return -1;
+    
     let left = 0;
     let right = needle.length-1;
 
